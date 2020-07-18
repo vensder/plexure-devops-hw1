@@ -14,7 +14,9 @@ Should output all the IP ranges assigned to the region, passed as the command li
 
 ## Implementation
 
-The script has the unit tests, which run by CI system GitHub Actions by push or PR.
+The script has the unit tests, which run by CI system GitHub Actions by push or PR to master.
+
+The tests passed for Python 3.6, 3.7, 3.8 versions.
 
 Script output IP ranges for the region passed as an argument.
 
