@@ -13,7 +13,7 @@ URL = 'https://ip-ranges.amazonaws.com/ip-ranges.json'
 
 def get_data(url):
     """
-    The function return decoded dictionary from the remote json
+    The function returns decoded dictionary from the remote json
     """
     with urllib.request.urlopen(url) as url:
         data = json.loads(url.read().decode())
@@ -28,20 +28,23 @@ def all_valid_regions(prefixes):
 
 
 def print_sorted_data(data):
+    """
+    The function prints iterable data line by line in sorted order
+    """
     for item in sorted(data):
         print(item)
 
 
 def region_ip_ranges(region, prefixes):
     """
-    The function return the set of IP ranges for the region
+    The function returns the set of IP ranges for the region
     """
     return set(item['ip_prefix'] for item in prefixes if item['region'] == region)
 
 
 def total_ip_address_count(ip_ranges):
     """
-    The function return the IP addresses count for all ranges in the region
+    The function returns the IP addresses count for all ranges in the region
     """
     return sum([2 ** (32 - int(ip_range.split('/')[-1])) for ip_range in ip_ranges])
 
