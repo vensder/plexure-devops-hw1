@@ -1,5 +1,7 @@
 # Task 1
 
+[![Python application](https://github.com/vensder/plexure-devops-hw1/workflows/Python%20application/badge.svg)](https://github.com/vensder/plexure-devops-hw1/actions?query=workflow%3A%22Python+application%22)
+
 Write a script using your preferred scripting language to download the AWS IP Ranges JSON File https://ip-ranges.amazonaws.com/ip-ranges.json and print all the IP ranges for a region name, when passed as a command-line argument, print an error when an invalid region is passed to your script.
 
 For example:
