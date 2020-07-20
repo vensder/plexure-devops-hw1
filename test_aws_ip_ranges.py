@@ -1,7 +1,7 @@
 import unittest
 from aws_ip_ranges import URL, all_valid_regions, get_data, region_ip_ranges, total_ip_address_count
 
-ip_range_regex = r'^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2]))?$'
+ip_range_regex = r'^([0-9]{1,3}\.){3}[0-9]{1,3}(\/([0-9]|[1-2][0-9]|3[0-2])){1}$'
 data = get_data(URL)
 region = 'us-west-1'
 
